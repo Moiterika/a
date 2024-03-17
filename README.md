@@ -28,9 +28,11 @@ This package does not contain a struct equivalent to the `IEnumerable` interface
 
 ### Todo
 
+- Implement
+  - OrderBy
+  - OrderByDescending
 - Test
   - Any
-  - Exists
   - GroupBy
   - ToMap
   - WhereSelect
