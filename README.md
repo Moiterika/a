@@ -2,9 +2,9 @@
 
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
-![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
-![Codecov](https://img.shields.io/badge/coverage-72.6%-yellow)
-[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
+![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic) 
+![Codecov](https://img.shields.io/badge/coverage-72.6%-yellow) 
+[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE) 
 
 ## Abstruct
 
