@@ -3,7 +3,7 @@
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
-![Codecov](https://img.shields.io/badge/coverage-48.1%-red)
+![Codecov](https://img.shields.io/badge/coverage-56.5%-red)
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
 
 ## Abstruct
