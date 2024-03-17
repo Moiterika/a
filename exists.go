@@ -1,8 +1,8 @@
 package a
 
 func Exists[T comparable](src []T, e T) bool {
-	for _, x := range src {
-		if e == x {
+	for i := range src {
+		if e == src[i] {
 			return true
 		}
 	}

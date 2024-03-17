@@ -7,11 +7,11 @@ func Filters[T any](src []T, fs ...func(T) bool) [][]T {
 		return ret
 	}
 ELEMENT_LOOP:
-	for _, e := range src {
+	for i := range src {
 		isMatched := false
-		for i := range fs {
-			if fs[i](e) {
-				ret[i] = append(ret[i], e)
+		for j := range fs {
+			if fs[j](src[i]) {
+				ret[j] = append(ret[j], src[i])
 				isMatched = true
 			}
 		}
@@ -19,7 +19,7 @@ ELEMENT_LOOP:
 			continue ELEMENT_LOOP
 		}
 		// others; the element unmatched all filters append into the last slice.
-		ret[len(fs)] = append(ret[len(fs)], e)
+		ret[len(fs)] = append(ret[len(fs)], src[i])
 	}
 	return ret
 }
