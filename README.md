@@ -1,6 +1,7 @@
 # a
 
-<img src="https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic" alt="Go"> ![](https://img.shields.io/badge/coverage-38.6%-red)
+<img src="https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic" alt="Go"> ![](https://img.shields.io/badge/coverage-43.8%-red)
+<!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ## Abstruct
 
@@ -13,6 +14,7 @@ This package does not contain a struct equivalent to the `IEnumerable` interface
 - Any
 - Exists
 - Filters
+- FirstOrDefault
 - GroupBy
 - Select
 - ToMap
