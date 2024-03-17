@@ -35,6 +35,11 @@ This package does not contain a struct equivalent to the `IEnumerable` interface
   - ToMap
   - WhereSelect
 
-### How to measure code coverage
+### Tests
 
-`go test -cover ./...`
+- How to measure code coverage
+  - `go test -cover ./...`
+- How to find not covered lines of code
+  - `go test -cover ./... -coverprofile=cover.out`
+  - `go tool cover -html=cover.out -o cover.html`
+  - see `cover.html`
