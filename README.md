@@ -1,5 +1,7 @@
 # a
 
+<img src="https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic" alt="Go"> ![](https://img.shields.io/badge/coverage-38.6%-red)
+
 ## Abstruct
 
 The `a` package incluedes simple Go utilities of Moiterika LLC. 
