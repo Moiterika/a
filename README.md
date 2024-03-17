@@ -15,10 +15,12 @@ This package does not contain a struct equivalent to the `IEnumerable` interface
 ### Currently implemented
 
 - Any
+- Chunk
 - Exists
 - Filters
 - FirstOrDefault
 - GroupBy
+- LastOrDefault
 - Select
 - ToMap
 - Where
@@ -30,7 +32,6 @@ This package does not contain a struct equivalent to the `IEnumerable` interface
   - Any
   - Exists
   - GroupBy
-  - Select
   - ToMap
   - WhereSelect
 
