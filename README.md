@@ -10,6 +10,7 @@ This package does not contain a struct equivalent to the `Enumerable` class, so 
 
 - Any
 - Exists
+- Filters
 - GroupBy
 - Select
 - ToMap
