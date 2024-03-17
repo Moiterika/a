@@ -1,7 +1,10 @@
 # a
 
-<img src="https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic" alt="Go"> ![](https://img.shields.io/badge/coverage-43.8%-red)
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
+
+![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
+![Codecov](https://img.shields.io/badge/coverage-48.1%-red)
+[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
 
 ## Abstruct
 
@@ -31,3 +34,6 @@ This package does not contain a struct equivalent to the `IEnumerable` interface
   - ToMap
   - WhereSelect
 
+### How to measure code coverage
+
+`go test -cover ./...`
