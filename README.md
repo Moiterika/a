@@ -8,4 +8,21 @@ However this package does not contain a struct equivalent to the `Enumerable` cl
 
 ### Currently implemented
 
+- Any
+- Exists
+- GroupBy
+- Select
+- ToMap
 - Where
+- WhereSelect
+
+### Todo
+
+- Test
+  - Any
+  - Exists
+  - GroupBy
+  - Select
+  - ToMap
+  - WhereSelect
+
