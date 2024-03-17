@@ -39,6 +39,14 @@ func TestFilters(t *testing.T) {
 			},
 			[][]int{{3, 4, 5}, {4, 5}, {1, 2}},
 		},
+		{
+			"int-no filters",
+			args[int]{
+				[]int{1, 2, 3, 4, 5},
+				nil,
+			},
+			[][]int{{1, 2, 3, 4, 5}},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
