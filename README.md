@@ -3,7 +3,7 @@
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
-![Codecov](https://img.shields.io/badge/coverage-87.4%-green)
+![Codecov](https://img.shields.io/badge/coverage-87.9%-green)
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
 
 ## Abstruct
@@ -30,6 +30,9 @@ This does not contain a struct equivalent to the `IEnumerable` interface, so def
 - OrderBy
 - OrderByDescending
 - Select
+- Sum
+  - TODO
+    - Sum for only number slice
 - ToMap
   - as an alternative to `ToDictionary`
 - Where
@@ -77,7 +80,6 @@ This does not contain a struct equivalent to the `IEnumerable` interface, so def
   - Skip
   - SkipLast
   - SkipWhile
-  - Sum
   - Take
   - TakeLast
   - TakeWhile
