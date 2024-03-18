@@ -3,7 +3,7 @@
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
-![Codecov](https://img.shields.io/badge/coverage-86.3%-green)
+![Codecov](https://img.shields.io/badge/coverage-87.4%-green)
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
 
 ## Abstruct
@@ -26,6 +26,7 @@ This does not contain a struct equivalent to the `IEnumerable` interface, so def
 - GroupBy
 - LastOrDefault
 - MaxBy
+- MinBy
 - OrderBy
 - OrderByDescending
 - Select
@@ -62,7 +63,6 @@ This does not contain a struct equivalent to the `IEnumerable` interface, so def
   - LongCount
   - Max
   - Min
-  - MinBy
   - OfType
   - Order
   - OrderDescending
