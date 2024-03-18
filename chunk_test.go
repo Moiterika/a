@@ -29,6 +29,24 @@ func TestChunk(t *testing.T) {
 			wantErr: false,
 		},
 		{
+			name:    "a slice of length 2 is too short to chunk size 5",
+			args:    args{src: []int{1, 2}, size: 5},
+			want:    [][]int{{1, 2}},
+			wantErr: false,
+		},
+		{
+			name:    "nil1",
+			args:    args{src: nil, size: 3},
+			want:    nil,
+			wantErr: false,
+		},
+		{
+			name:    "nil2",
+			args:    args{src: []int{}, size: 3},
+			want:    [][]int{{}},
+			wantErr: false,
+		},
+		{
 			name:    "error",
 			args:    args{src: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, size: 0},
 			want:    nil,
