@@ -1,10 +1,15 @@
 package a
 
-func Any[T any](src []T, a func(T) bool) bool {
+import "fmt"
+
+func Any[T any](src []T, a func(T) bool) (bool, error) {
+	if a == nil {
+		return true, fmt.Errorf("a is nil: %w", ErrArg)
+	}
 	for _, e := range src {
 		if a(e) {
-			return true
+			return true, nil
 		}
 	}
-	return false
+	return false, nil
 }

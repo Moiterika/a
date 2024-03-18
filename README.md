@@ -3,7 +3,7 @@
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
-![Codecov](https://img.shields.io/badge/coverage-88.4%-green)
+![Codecov](https://img.shields.io/badge/coverage-91.3%-green)
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
 
 ## Abstruct
@@ -14,6 +14,7 @@ This does not contain a struct equivalent to the `IEnumerable` interface, so def
 
 ### Currently implemented
 
+- All
 - Any
 - Chunk
 - Contains
@@ -45,7 +46,6 @@ This does not contain a struct equivalent to the `IEnumerable` interface, so def
 - Doc
 - Implement
   - Aggregate
-  - All
   - AsEnumerable
   - Average
   - Cast
@@ -94,7 +94,6 @@ This does not contain a struct equivalent to the `IEnumerable` interface, so def
   - UnionBy
   - Zip
 - Test
-  - Any
   - GroupBy
   - ToMap
   - WhereSelect
