@@ -3,7 +3,7 @@
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic) 
-![Codecov](https://img.shields.io/badge/coverage-73.4%-yellow) 
+![Codecov](https://img.shields.io/badge/coverage-74.2%-yellow) 
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE) 
 
 ## Abstruct
@@ -16,22 +16,81 @@ This does not contain a struct equivalent to the `IEnumerable` interface, so def
 
 - Any
 - Chunk
-- Exists
+- Contains
 - Filters
+  - the original function
+  - Filters() returns results corresponding to filters and the unfiltered result.
 - FirstOrDefault
 - GroupBy
 - LastOrDefault
 - OrderBy
+- OrderByDescending
 - Select
 - ToMap
+  - as an alternative to `ToDictionary`
 - Where
 - WhereSelect
+  - the original function
+  - WhereSelect() is convenient when using Where() and Select() at the same time.
 
 ### Todo
 
 - Doc
 - Implement
-  - OrderByDescending
+  - Aggregate
+  - All
+  - AsEnumerable
+  - Average
+  - Cast
+  - Concat
+  - Count
+  - DefaultIfEmpty
+  - Distinct
+  - DistinctBy
+  - ElementAt
+  - ElementAtOrDefault
+  - Empty
+  - Except
+  - ExceptBy
+  - First
+  - GroupJoin
+  - Intersect
+  - IntersectBy
+  - Join
+  - Last
+  - LongCount
+  - Max
+  - MaxBy
+  - Min
+  - MinBy
+  - OfType
+  - Order
+  - OrderDescending
+  - Prepend
+  - Range
+  - Repeat
+  - Reverse
+  - SelectMany
+  - SequenceEqual
+  - Single
+  - SingleOrDefault
+  - Skip
+  - SkipLast
+  - SkipWhile
+  - Sum
+  - Take
+  - TakeLast
+  - TakeWhile
+  - ThenBy
+  - ThenByDescending
+  - ToArray
+  - ToHashSet
+  - ToList
+  - ToLookup
+  - TryGetNonEnumeratedCount
+  - Union
+  - UnionBy
+  - Zip
 - Test
   - Any
   - GroupBy
