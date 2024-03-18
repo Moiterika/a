@@ -10,7 +10,7 @@
 
 The `a` package is simple Go utilities for collection operation. 
 This is inspired by the language integrated query (LINQ) in .NET Framework. 
-This does not contain a struct equivalent to the `IEnumerable` interface, so deferred execution using the iterator pattern is not possible. 
+This does not contain a struct/interface equivalent to the `Enumerable` class or the `IEnumerable` interface, so deferred execution using the iterator pattern is not possible. 
 
 ### Currently implemented
 
