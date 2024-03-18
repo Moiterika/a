@@ -3,7 +3,7 @@
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
-![Codecov](https://img.shields.io/badge/coverage-82.8%-yellow)
+![Codecov](https://img.shields.io/badge/coverage-85.0%-green)
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
 
 ## Abstruct
@@ -18,6 +18,7 @@ This does not contain a struct equivalent to the `IEnumerable` interface, so def
 - Chunk
 - Contains
 - Distinct
+- DistinctBy
 - Filters
   - the original function
   - Filters() returns results corresponding to filters and the unfiltered result.
@@ -46,7 +47,6 @@ This does not contain a struct equivalent to the `IEnumerable` interface, so def
   - Concat
   - Count
   - DefaultIfEmpty
-  - DistinctBy
   - ElementAt
   - ElementAtOrDefault
   - Empty
