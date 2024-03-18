@@ -31,7 +31,7 @@ func TestFilters(t *testing.T) {
 				[]int{1, 2, 3, 4, 5},
 				[]func(e int) bool{func(e int) bool { return false }},
 			},
-			[][]int{nil},
+			[][]int{{}},
 			[]int{1, 2, 3, 4, 5},
 		},
 		{
@@ -42,6 +42,15 @@ func TestFilters(t *testing.T) {
 			},
 			[][]int{{3, 4, 5}, {4, 5}},
 			[]int{1, 2},
+		},
+		{
+			"int-some nil filters",
+			args[int]{
+				[]int{1, 2, 3, 4, 5},
+				[]func(e int) bool{func(e int) bool { return e >= 3 }, nil, func(e int) bool { return e%2 == 0 }, nil},
+			},
+			[][]int{{3, 4, 5}, {}, {2, 4}, {}},
+			[]int{1},
 		},
 		{
 			"int-no filters",

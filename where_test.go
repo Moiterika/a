@@ -48,6 +48,22 @@ func TestWhere(t *testing.T) {
 			},
 			[]int{}, // typed-nil; it's not nil.
 		},
+		{
+			"int-nil4",
+			args[int]{
+				[]int{1, 2, 3, 4, 5},
+				nil,
+			},
+			[]int{}, // typed-nil; it's not nil.
+		},
+		{
+			"int-nil5",
+			args[int]{
+				nil,
+				nil,
+			},
+			nil,
+		},
 	}
 	for _, tt := range intTests {
 		t.Run(tt.name, func(t *testing.T) {

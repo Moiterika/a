@@ -1,12 +1,17 @@
 package a
 
-func Select[T, S any](src []T, s func(T) S) []S {
+import "fmt"
+
+func Select[T, S any](src []T, s func(T) S) ([]S, error) {
+	if s == nil {
+		return nil, fmt.Errorf("s is nil: %w", ErrArg)
+	}
 	if src == nil {
-		return nil
+		return nil, nil
 	}
 	ret := make([]S, 0, len(src))
 	for i := range src {
 		ret = append(ret, s(src[i]))
 	}
-	return ret
+	return ret, nil
 }

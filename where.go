@@ -5,6 +5,9 @@ func Where[T any](src []T, w func(T) bool) []T {
 		return nil
 	}
 	ret := make([]T, 0, len(src))
+	if w == nil {
+		return ret
+	}
 	for i := range src {
 		if w(src[i]) {
 			ret = append(ret, src[i])

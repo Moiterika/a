@@ -8,18 +8,16 @@ func TestAny(t *testing.T) {
 		a   func(int) bool
 	}
 	tests := []struct {
-		name    string
-		args    args
-		want    bool
-		wantErr bool
+		name string
+		args args
+		want bool
 	}{
 		{
 			name: "ok",
 			args: args{src: []int{1, 2, 3, 4, 5}, a: func(e int) bool {
 				return e >= 5
 			}},
-			want:    true,
-			wantErr: false,
+			want: true,
 		},
 		{
 			name: "ok2",
@@ -29,8 +27,7 @@ func TestAny(t *testing.T) {
 					return e < 0
 				},
 			},
-			want:    false,
-			wantErr: false,
+			want: false,
 		},
 		{
 			name: "nil1",
@@ -40,8 +37,7 @@ func TestAny(t *testing.T) {
 					return e <= 4
 				},
 			},
-			want:    false,
-			wantErr: false,
+			want: false,
 		},
 		{
 			name: "nil2",
@@ -51,26 +47,20 @@ func TestAny(t *testing.T) {
 					return e <= 4
 				},
 			},
-			want:    false,
-			wantErr: false,
+			want: false,
 		},
 		{
-			name: "nil3",
+			name: "ng-nil3;irregular",
 			args: args{
 				src: []int{1, 2, 3, 4, 5},
-				a:   nil,
+				a:   nil, // irregular
 			},
-			want:    true,
-			wantErr: true,
+			want: false,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := Any(tt.args.src, tt.args.a)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("Any() error = %v, wantErr %v", err, tt.wantErr)
-				return
-			}
+			got := Any(tt.args.src, tt.args.a)
 			if got != tt.want {
 				t.Errorf("Any() = %v, want %v", got, tt.want)
 			}

@@ -6,6 +6,12 @@ func Filters[T any](src []T, fs ...func(T) bool) ([][]T, []T) {
 	}
 	residues := make([][]T, len(fs))
 	filtrate := make([]T, 0)
+	for j := range fs {
+		if fs[j] == nil {
+			fs[j] = func(_ T) bool { return false }
+		}
+		residues[j] = make([]T, 0)
+	}
 ELEMENT_LOOP:
 	for i := range src {
 		isMatched := false
