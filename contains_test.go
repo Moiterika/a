@@ -53,6 +53,21 @@ func TestContains(t *testing.T) {
 			args: args[*int]{src: []*int{&src[0], &src[1], &src[2]}, e: &outOfSrc},
 			want: false,
 		},
+		{
+			name: "*int-nil",
+			args: args[*int]{src: []*int{}, e: &outOfSrc},
+			want: false,
+		},
+		{
+			name: "*int-nil2",
+			args: args[*int]{src: nil, e: &outOfSrc},
+			want: false,
+		},
+		{
+			name: "*int-nil3",
+			args: args[*int]{src: []*int{&src[0], &src[1], &src[2]}, e: nil},
+			want: false,
+		},
 	}
 	for _, tt := range intPtrTests {
 		t.Run(tt.name, func(t *testing.T) {

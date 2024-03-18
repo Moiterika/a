@@ -30,7 +30,7 @@ func TestWhere(t *testing.T) {
 				nil,
 				func(e int) bool { return e >= 3 },
 			},
-			[]int{}, // nil => error because typed-nil
+			nil,
 		},
 		{
 			"int-nil2",
@@ -38,15 +38,15 @@ func TestWhere(t *testing.T) {
 				[]int{},
 				func(e int) bool { return e >= 3 },
 			},
-			[]int{},
+			[]int{}, // typed-nil; it's not nil.
 		},
 		{
 			"int-nil3",
 			args[int]{
-				nil,
-				func(e int) bool { return e >= 3 },
+				[]int{1, 2, 3, 4, 5},
+				func(e int) bool { return e >= 100 },
 			},
-			[]int{},
+			[]int{}, // typed-nil; it's not nil.
 		},
 	}
 	for _, tt := range intTests {

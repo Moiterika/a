@@ -23,12 +23,26 @@ func TestOrderByDescending(t *testing.T) {
 			}},
 			want: []int{5, 4, 3, 2, 1},
 		},
+		{
+			name: "int-nil1",
+			args: args[int, int]{src: nil, o: func(e int) int {
+				return e
+			}},
+			want: nil,
+		},
+		{
+			name: "int-nil2",
+			args: args[int, int]{src: []int{}, o: func(e int) int {
+				return e
+			}},
+			want: []int{},
+		},
 	}
 	for _, tt := range intTests {
 		t.Run(tt.name, func(t *testing.T) {
-			OrderByDescending(tt.args.src, tt.args.o)
-			if !reflect.DeepEqual(tt.args.src, tt.want) {
-				t.Errorf("OrderByDescending() = %v, want %v", tt.args.src, tt.want)
+			got := OrderByDescending(tt.args.src, tt.args.o)
+			if !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("OrderByDescending() = %v, want %v", got, tt.want)
 			}
 		})
 	}

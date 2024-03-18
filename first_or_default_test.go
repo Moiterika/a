@@ -21,7 +21,12 @@ func TestFirstOrDefault(t *testing.T) {
 			want: &src[0],
 		},
 		{
-			name: "ok-nil",
+			name: "ok-nil1",
+			args: args[*int]{src: nil},
+			want: nil,
+		},
+		{
+			name: "ok-nil2",
 			args: args[*int]{src: []*int{}},
 			want: nil,
 		},

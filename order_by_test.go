@@ -23,12 +23,49 @@ func TestOrderBy(t *testing.T) {
 			}},
 			want: []int{1, 2, 3, 4, 5},
 		},
+		{
+			name: "int-nil",
+			args: args[int, int]{src: []int{}, o: func(e int) int {
+				return e
+			}},
+			want: []int{},
+		},
+		{
+			name: "int-nil2",
+			args: args[int, int]{src: nil, o: func(e int) int {
+				return e
+			}},
+			want: nil,
+		},
 	}
 	for _, tt := range intTests {
 		t.Run(tt.name, func(t *testing.T) {
-			OrderBy(tt.args.src, tt.args.o)
-			if !reflect.DeepEqual(tt.args.src, tt.want) {
-				t.Errorf("OrderBy() = %v, want %v", tt.args.src, tt.want)
+			got := OrderBy(tt.args.src, tt.args.o)
+			if !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("OrderBy() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+
+	src := []int{3, 4, 5, 1, 2}
+	intPtrTests := []struct {
+		name string
+		args args[*int, int]
+		want []*int
+	}{
+		{
+			name: "*int-ok",
+			args: args[*int, int]{src: []*int{&src[0], &src[1], &src[2], &src[3], &src[4]}, o: func(e *int) int {
+				return *e
+			}},
+			want: []*int{&src[3], &src[4], &src[0], &src[1], &src[2]},
+		},
+	}
+	for _, tt := range intPtrTests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := OrderBy(tt.args.src, tt.args.o)
+			if !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("OrderBy() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -66,9 +103,9 @@ func TestOrderBy(t *testing.T) {
 	}
 	for _, tt := range structTests {
 		t.Run(tt.name, func(t *testing.T) {
-			OrderBy(tt.args.src, tt.args.o)
-			if !reflect.DeepEqual(tt.args.src, tt.want) {
-				t.Errorf("OrderBy() = %v, want %v", tt.args.src, tt.want)
+			got := OrderBy(tt.args.src, tt.args.o)
+			if !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("OrderBy() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -102,9 +139,9 @@ func TestOrderBy(t *testing.T) {
 	}
 	for _, tt := range structTests2 {
 		t.Run(tt.name, func(t *testing.T) {
-			OrderBy(tt.args.src, tt.args.o)
-			if !reflect.DeepEqual(tt.args.src, tt.want) {
-				t.Errorf("OrderBy() = %v, want %v", tt.args.src, tt.want)
+			got := OrderBy(tt.args.src, tt.args.o)
+			if !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("OrderBy() = %v, want %v", got, tt.want)
 			}
 		})
 	}
