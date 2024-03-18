@@ -19,7 +19,7 @@ ELEMENT_LOOP:
 			continue ELEMENT_LOOP
 		}
 		// the element unmatched all filters append into filtrate.
-		// this means "others", "else in if-else", "default in switch".
+		// this means such as "others", "else in if-else", "default in switch".
 		filtrate = append(filtrate, src[i])
 	}
 	return residues, filtrate
