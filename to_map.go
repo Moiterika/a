@@ -6,6 +6,9 @@ func ToMap[K comparable, T any](src []T, k func(T) K) map[K]T {
 		return ret
 	}
 	for _, e := range src {
+		if _, exists := ret[k(e)]; exists {
+			continue
+		}
 		ret[k(e)] = e
 	}
 	return ret

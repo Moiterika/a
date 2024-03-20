@@ -2,16 +2,12 @@ package a
 
 import (
 	"cmp"
-	"fmt"
 )
 
-func MaxBy[T any, S cmp.Ordered](src []T, m func(T) S) (T, error) {
+func MaxBy[T any, S cmp.Ordered](src []T, m func(T) S) T {
 	var ret T
-	if m == nil {
-		return ret, fmt.Errorf("m is nil: %w", ErrArg)
-	}
-	if len(src) == 0 {
-		return ret, nil
+	if len(src) == 0 || m == nil {
+		return ret
 	}
 	ret = src[0]
 	maxVal := m(src[0])
@@ -22,5 +18,5 @@ func MaxBy[T any, S cmp.Ordered](src []T, m func(T) S) (T, error) {
 			maxVal = v
 		}
 	}
-	return ret, nil
+	return ret
 }

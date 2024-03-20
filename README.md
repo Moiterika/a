@@ -3,7 +3,7 @@
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
-![Codecov_91.3%](https://img.shields.io/badge/coverage-91.3%-green)
+![Codecov_87.8%](https://img.shields.io/badge/coverage-87.8%-green)
 [![License_MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
 
 ## Abstruct
@@ -17,25 +17,33 @@ This does not contain a struct/interface equivalent to the `Enumerable` class or
 - All
 - Any
 - Chunk
+- ChunkWithErr
 - Contains
 - Distinct
 - DistinctBy
+- DistinctByWithErr
 - Filters
   - the original function
   - Filters() returns results corresponding to filters and the unfiltered result.
 - FirstOrDefault
 - GroupBy
+- GroupByWithErr
 - LastOrDefault
 - MaxBy
+- MaxByWithErr
 - MinBy
+- MinByWithErr
 - OrderBy
+- OrderByWithErr
 - OrderByDescending
+- OrderByDescendingWithErr
 - Select
+- SelectWithErr
 - Sum
-  - TODO
-    - Sum for only number slice
+- SumWithErr
 - ToMap
   - as an alternative to `ToDictionary`
+- ToMapWithErr
 - Where
 - WhereSelect
   - the original function
@@ -80,6 +88,8 @@ This does not contain a struct/interface equivalent to the `Enumerable` class or
   - Skip
   - SkipLast
   - SkipWhile
+  - Sum
+    - for only number slice
   - Take
   - TakeLast
   - TakeWhile

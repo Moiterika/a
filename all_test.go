@@ -55,7 +55,7 @@ func TestAll(t *testing.T) {
 				src: []int{1, 2, 3, 4, 5},
 				a:   nil, // irregular
 			},
-			want: false,
+			want: true,
 		},
 	}
 	for _, tt := range tests {
