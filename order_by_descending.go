@@ -2,21 +2,20 @@ package a
 
 import (
 	"cmp"
-	"fmt"
 	"sort"
 )
 
-func OrderByDescending[T any, S cmp.Ordered](src []T, o func(T) S) ([]T, error) {
-	if o == nil {
-		return nil, fmt.Errorf("o is nil: %w", ErrArg)
-	}
+func OrderByDescending[T any, S cmp.Ordered](src []T, o func(T) S) []T {
 	if src == nil {
-		return nil, nil
+		return nil
 	}
 	ret := make([]T, len(src))
 	copy(ret, src)
+	if o == nil {
+		return ret
+	}
 	sort.SliceStable(ret, func(i, j int) bool {
 		return o(ret[i]) > o(ret[j])
 	})
-	return ret, nil
+	return ret
 }
