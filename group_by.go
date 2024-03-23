@@ -6,7 +6,11 @@ func GroupBy[K comparable, T any](src []T, k func(T) K) map[K][]T {
 	}
 	ret := make(map[K][]T, len(src))
 	for _, e := range src {
-		ret[k(e)] = []T{e}
+		if _, exists := ret[k(e)]; !exists {
+			ret[k(e)] = []T{e}
+			continue
+		}
+		ret[k(e)] = append(ret[k(e)], e)
 	}
 	return ret
 }
