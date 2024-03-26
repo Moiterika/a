@@ -3,7 +3,7 @@
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
-![Codecov_89.3%](https://img.shields.io/badge/coverage-89.3%-green)
+![Codecov_89.2%](https://img.shields.io/badge/coverage-89.2%-green)
 [![License_MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
 
 ## Abstruct
@@ -43,6 +43,7 @@ This does not contain a struct/interface equivalent to the `Enumerable` class or
 - OrderByDescendingWithErr
 - Select
 - SelectWithErr
+- SelectMany
 - Sum
 - SumWithErr
 - ToMap
@@ -86,7 +87,6 @@ This does not contain a struct/interface equivalent to the `Enumerable` class or
   - Range
   - Repeat
   - Reverse
-  - SelectMany
   - SequenceEqual
   - Single
   - SingleOrDefault
