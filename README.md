@@ -3,14 +3,14 @@
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
-![Codecov_89.2%](https://img.shields.io/badge/coverage-89.2%-green)
+![Codecov_83.7%](https://img.shields.io/badge/coverage-83.7%-yellow)
 [![License_MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
 
 ## Abstruct
 
-The `a` package is simple Go utilities for collection operation. 
-This is inspired by the language integrated query (LINQ) in .NET Framework. 
-This does not contain a struct/interface equivalent to the `Enumerable` class or the `IEnumerable` interface, so deferred execution using the iterator pattern is not possible. 
+The `a` package includes simple Go utilities for collection operation. 
+This package is inspired by the language integrated query (LINQ) in .NET Framework. 
+There are no structs/interfaces equivalent to the `Enumerable` class or the `IEnumerable` interface, so deferred execution using the iterator pattern is not possible. 
 
 ### Currently implemented
 
@@ -46,6 +46,9 @@ This does not contain a struct/interface equivalent to the `Enumerable` class or
 - SelectMany
 - Sum
 - SumWithErr
+- Switch
+  - the original function
+  - Switch() returns results corresponding to cases and the unfiltered result.
 - ToMap
   - as an alternative to `ToDictionary`
 - ToMapWithErr
