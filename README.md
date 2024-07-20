@@ -3,7 +3,7 @@
 <!-- coverage color = red ＜ 65% ≦ yellow ＜ 85%　≦ green -->
 
 ![Go](https://img.shields.io/badge/-Go-76E1FE.svg?logo=go&style=plastic)
-![Codecov_83.7%](https://img.shields.io/badge/coverage-83.7%-yellow)
+![Codecov_84.4%](https://img.shields.io/badge/coverage-84.4%-yellow)
 [![License_MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Moiterika/a/blob/main/LICENSE)
 
 ## Abstruct
@@ -44,6 +44,8 @@ There are no structs/interfaces equivalent to the `Enumerable` class or the `IEn
 - Select
 - SelectWithErr
 - SelectMany
+- Sort
+  - support for multi-sorting with combinations of `OrderBy`, `ThenBy`, `OrderByDescending`, and `ThenByDescending`.
 - Sum
 - SumWithErr
 - Switch
